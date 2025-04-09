@@ -1,0 +1,36 @@
+{
+    "extends": [
+      "airbnb",
+      "plugin:import/recommended"
+    ],
+    "ignorePatterns": [
+      "**/node_modules"
+    ],
+    "settings": {
+      "import/resolver": {
+        "babel-module": {
+          "allowExistingDirectories": true
+        },
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      },
+      "react": {
+        "version": "detect"
+      }
+    },
+    "rules": {
+      "func-names": [
+        "error",
+        "as-needed"
+      ]
+    },
+    "parserOptions": {
+      "ecmaVersion": 2020
+    }
+  }
