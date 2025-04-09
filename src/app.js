@@ -1,8 +1,16 @@
 import express from 'express';
 import cors from 'cors';
+import pool from '@config/db'
 
 const app = express();
 const message = 'Url shortener';
+
+app.use(cors({
+    origin: '*',
+    methods: 'GET,POST,PUT,DELETE, OPTIONS',
+    allowedHeaders: 'Content-Type,Authorization', // Specify allowed headers
+    credentials: true,
+  }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
